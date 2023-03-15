@@ -1,0 +1,11 @@
+<div>
+    <h1> List of products</h1>
+    {% for p in product %}
+       <h3>name :{{p.name}}</h3>
+       <p> price : {{p.price}}</p>
+       <p>quality : {{p.quality}}<p><br>
+       <br>
+       <a href="/add_to_cart/{{p.id}}/add">ADD TO CART</a>
+       <hr> 
+    {% endfor %}
+</div>

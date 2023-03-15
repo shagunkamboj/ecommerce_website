@@ -1,0 +1,15 @@
+{% load static %}
+<div>
+    <h2> cart_List</h2>
+    <h1>{{request.session.cart}}</h1>
+    {% for p in cart %}
+       <p>id: {{p.id}}</p>
+       <p>name : {{p.product.name}}</p>
+       <p> quality : {{p.product.quality}}<p><br>
+       <br>
+      
+       <a href="{{p.id}}/delete">remove from  cart</a>
+       <hr> 
+    {% endfor %}
+    
+</div>
